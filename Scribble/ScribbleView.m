@@ -12,7 +12,7 @@ static float dotSize = 16.0;
 
 @implementation ScribbleView
 {
-    NSMutableArray *points;
+    NSMutableArray *allStrokes;
     NSMutableArray *currentStroke;
 
 }
@@ -37,7 +37,7 @@ static float dotSize = 16.0;
 
 - (void)initializeScribble {
     NSLog(@"Initializing View");
-    points = [NSMutableArray arrayWithCapacity:500];
+    allStrokes = [NSMutableArray arrayWithCapacity:500];
 }
 
 
@@ -48,7 +48,7 @@ static float dotSize = 16.0;
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
 
-    for (NSMutableArray *stroke in points) {
+    for (NSMutableArray *stroke in allStrokes) {
         if (stroke.count == 1) {
             CGPoint p = [stroke[0] CGPointValue];
             [self drawDotAtPoint:p inContext:context];
@@ -69,9 +69,20 @@ static float dotSize = 16.0;
             CGContextStrokePath(context);
         }
     }
-
-
 }
+
+
+- (void)addPathPointAt:(CGPoint)point {
+    [currentStroke addObject:[NSValue valueWithCGPoint:point]];
+}
+
+- (void)drawDotAtPoint:(CGPoint)loc inContext:(CGContextRef)context {
+    CGRect frame = CGRectMake(loc.x - dotSize / 2.0f, loc.y - dotSize / 2.0f, dotSize, dotSize);
+
+    CGContextSetFillColorWithColor (context,[[UIColor blackColor] CGColor]);
+    CGContextFillEllipseInRect(context, frame);
+}
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     CGPoint loc = [[touches anyObject] locationInView:self];
@@ -88,7 +99,7 @@ static float dotSize = 16.0;
 }
 
 - (void)finalizePath {
-    [points addObject:currentStroke];
+    [allStrokes addObject:currentStroke];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -99,16 +110,6 @@ static float dotSize = 16.0;
     [self setNeedsDisplay];
 }
 
-- (void)addPathPointAt:(CGPoint)point {
-    [currentStroke addObject:[NSValue valueWithCGPoint:point]];
-}
-
-- (void)drawDotAtPoint:(CGPoint)loc inContext:(CGContextRef)context {
-    CGRect frame = CGRectMake(loc.x - dotSize / 2.0f, loc.y - dotSize / 2.0f, dotSize, dotSize);
-
-    CGContextSetFillColorWithColor (context,[[UIColor blackColor] CGColor]);
-    CGContextFillEllipseInRect(context, frame);
-}
 
 
 @end

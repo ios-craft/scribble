@@ -14,6 +14,7 @@
 		40DD084219FD3A13000CD01C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40DD084119FD3A13000CD01C /* Images.xcassets */; };
 		40DD084519FD3A13000CD01C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DD084319FD3A13000CD01C /* LaunchScreen.xib */; };
 		40DD085119FD3A13000CD01C /* ScribbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD085019FD3A13000CD01C /* ScribbleTests.m */; };
+		40DD085D19FD3DFF000CD01C /* ScribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD085C19FD3DFF000CD01C /* ScribbleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		40DD084A19FD3A13000CD01C /* ScribbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScribbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DD084F19FD3A13000CD01C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40DD085019FD3A13000CD01C /* ScribbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleTests.m; sourceTree = "<group>"; };
+		40DD085B19FD3DFF000CD01C /* ScribbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleView.h; sourceTree = "<group>"; };
+		40DD085C19FD3DFF000CD01C /* ScribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		40DD083319FD3A13000CD01C /* Scribble */ = {
 			isa = PBXGroup;
 			children = (
+				40DD085A19FD3C4F000CD01C /* Views */,
 				40DD083819FD3A13000CD01C /* AppDelegate.h */,
 				40DD083919FD3A13000CD01C /* AppDelegate.m */,
 				40DD083B19FD3A13000CD01C /* ViewController.h */,
@@ -117,6 +121,15 @@
 				40DD084F19FD3A13000CD01C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40DD085A19FD3C4F000CD01C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				40DD085B19FD3DFF000CD01C /* ScribbleView.h */,
+				40DD085C19FD3DFF000CD01C /* ScribbleView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +234,7 @@
 			files = (
 				40DD083D19FD3A13000CD01C /* ViewController.m in Sources */,
 				40DD083A19FD3A13000CD01C /* AppDelegate.m in Sources */,
+				40DD085D19FD3DFF000CD01C /* ScribbleView.m in Sources */,
 				40DD083719FD3A13000CD01C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

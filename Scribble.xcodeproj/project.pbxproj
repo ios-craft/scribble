@@ -15,6 +15,9 @@
 		40DD084519FD3A13000CD01C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DD084319FD3A13000CD01C /* LaunchScreen.xib */; };
 		40DD085119FD3A13000CD01C /* ScribbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD085019FD3A13000CD01C /* ScribbleTests.m */; };
 		40DD085D19FD3DFF000CD01C /* ScribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD085C19FD3DFF000CD01C /* ScribbleView.m */; };
+		696C15033BD2A13FBE91EC4C /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1D04DD8DFCB25B3F290A /* Scribble.m */; };
+		696C175888438CF37B97A34C /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C15FBF9DC6ADE7AE447E6 /* Stroke.m */; };
+		696C1B2099DAD9DCE9CA1D0E /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C199ABEB0BF11D2E079D1 /* Vertex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,13 @@
 		40DD085019FD3A13000CD01C /* ScribbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScribbleTests.m; sourceTree = "<group>"; };
 		40DD085B19FD3DFF000CD01C /* ScribbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleView.h; sourceTree = "<group>"; };
 		40DD085C19FD3DFF000CD01C /* ScribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleView.m; sourceTree = "<group>"; };
+		696C141BD9269F5CA2575E89 /* Scribble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
+		696C15FBF9DC6ADE7AE447E6 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
+		696C1810CB2610ADF2960192 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
+		696C199ABEB0BF11D2E079D1 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
+		696C1BF1A797C4606634DF05 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		696C1D04DD8DFCB25B3F290A /* Scribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
+		696C1D26AFC83243574FC7FB /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mark.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,7 @@
 				40DD084119FD3A13000CD01C /* Images.xcassets */,
 				40DD084319FD3A13000CD01C /* LaunchScreen.xib */,
 				40DD083419FD3A13000CD01C /* Supporting Files */,
+				696C15217F4D4FC1A233DCFF /* Model */,
 			);
 			path = Scribble;
 			sourceTree = "<group>";
@@ -130,6 +141,20 @@
 				40DD085C19FD3DFF000CD01C /* ScribbleView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		696C15217F4D4FC1A233DCFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				696C1D26AFC83243574FC7FB /* Mark.h */,
+				696C199ABEB0BF11D2E079D1 /* Vertex.m */,
+				696C1BF1A797C4606634DF05 /* Vertex.h */,
+				696C15FBF9DC6ADE7AE447E6 /* Stroke.m */,
+				696C1810CB2610ADF2960192 /* Stroke.h */,
+				696C1D04DD8DFCB25B3F290A /* Scribble.m */,
+				696C141BD9269F5CA2575E89 /* Scribble.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +261,9 @@
 				40DD083A19FD3A13000CD01C /* AppDelegate.m in Sources */,
 				40DD085D19FD3DFF000CD01C /* ScribbleView.m in Sources */,
 				40DD083719FD3A13000CD01C /* main.m in Sources */,
+				696C1B2099DAD9DCE9CA1D0E /* Vertex.m in Sources */,
+				696C175888438CF37B97A34C /* Stroke.m in Sources */,
+				696C15033BD2A13FBE91EC4C /* Scribble.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

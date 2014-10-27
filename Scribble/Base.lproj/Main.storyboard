@@ -48,6 +48,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Bazgroł" id="u7U-kc-doG"/>
+                    <connections>
+                        <outlet property="canvas" destination="Btb-cu-nZd" id="tyO-rD-PFb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

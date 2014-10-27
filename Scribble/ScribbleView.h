@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol Mark;
+
 @interface ScribbleView : UIView
+
+@property (nonatomic, strong) id <Mark> mark;
 
 @end

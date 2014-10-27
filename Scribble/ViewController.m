@@ -7,22 +7,61 @@
 //
 
 #import "ViewController.h"
+#import "Scribble.h"
+#import "ScribbleView.h"
+#import "Vertex.h"
+#import "Stroke.h"
 
-@interface ViewController ()
+
+@interface ViewController () {
+    Scribble *scribble;
+    IBOutlet ScribbleView *canvas;
+}
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    CGPoint startPoint;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title = @"Scribble";
+
+    scribble = [Scribble new];
+    canvas.mark = scribble.rootMark;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    startPoint = [[touches anyObject] locationInView:canvas];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    CGPoint lastPoint = [[touches anyObject] previousLocationInView:canvas];
+
+    if (CGPointEqualToPoint(lastPoint, startPoint)) {
+        id <Mark> newStroke = [Stroke new];
+        [scribble addNewMark:newStroke];
+    }
+
+    CGPoint thisPoint = [[touches anyObject] locationInView:canvas];
+    Vertex *vertex = [[Vertex alloc] initWithLocation:thisPoint];
+    [scribble appendToCurrentMark:vertex];
+
+    [canvas setNeedsDisplay];
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    startPoint = CGPointZero;
+}
+
 
 @end

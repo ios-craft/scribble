@@ -6,7 +6,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@protocol Mark <NSObject>
+@protocol Mark <NSObject, NSCoding>
 
 @property (nonatomic, assign) CGPoint location;
 @property (nonatomic, readonly) NSUInteger count;

@@ -21,6 +21,24 @@
     return [[self alloc] initWithLocation:location];
 }
 
+#pragma mark -
+#pragma mark NSCoder methods
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super init])
+    {
+        self.location = [(NSValue *)[coder decodeObjectForKey:@"VertexLocation"] CGPointValue];
+    }
+
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:[NSValue valueWithCGPoint:self.location] forKey:@"VertexLocation"];
+}
+
 - (void)addMark:(id <Mark>)mark {
 
 }

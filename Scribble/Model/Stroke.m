@@ -22,6 +22,25 @@ static const CGFloat lineWidth = 8.0f;
     return self;
 }
 
+#pragma mark -
+#pragma mark NSCoder methods
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    if (self = [super init])
+    {
+        children = [coder decodeObjectForKey:@"StrokeChildren"];
+    }
+
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:children forKey:@"StrokeChildren"];
+}
+
+
 - (CGPoint)location {
     // return the location of the first child
     if ([children count] > 0) {

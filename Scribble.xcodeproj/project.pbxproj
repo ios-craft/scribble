@@ -15,6 +15,7 @@
 		40DD084519FD3A13000CD01C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40DD084319FD3A13000CD01C /* LaunchScreen.xib */; };
 		40DD085119FD3A13000CD01C /* ScribbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD085019FD3A13000CD01C /* ScribbleTests.m */; };
 		40DD085D19FD3DFF000CD01C /* ScribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD085C19FD3DFF000CD01C /* ScribbleView.m */; };
+		696C119FFAB0B7F06286C69B /* Dot.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1AB9A71FF112980284F5 /* Dot.m */; };
 		696C15033BD2A13FBE91EC4C /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1D04DD8DFCB25B3F290A /* Scribble.m */; };
 		696C175888438CF37B97A34C /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C15FBF9DC6ADE7AE447E6 /* Stroke.m */; };
 		696C1B2099DAD9DCE9CA1D0E /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C199ABEB0BF11D2E079D1 /* Vertex.m */; };
@@ -50,8 +51,10 @@
 		696C15FBF9DC6ADE7AE447E6 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
 		696C1810CB2610ADF2960192 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
 		696C199ABEB0BF11D2E079D1 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
+		696C1AB9A71FF112980284F5 /* Dot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dot.m; sourceTree = "<group>"; };
 		696C1BF1A797C4606634DF05 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		696C1D04DD8DFCB25B3F290A /* Scribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
+		696C1D171E8B28A6A3527BAA /* Dot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dot.h; sourceTree = "<group>"; };
 		696C1D26AFC83243574FC7FB /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mark.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +156,8 @@
 				696C1810CB2610ADF2960192 /* Stroke.h */,
 				696C1D04DD8DFCB25B3F290A /* Scribble.m */,
 				696C141BD9269F5CA2575E89 /* Scribble.h */,
+				696C1AB9A71FF112980284F5 /* Dot.m */,
+				696C1D171E8B28A6A3527BAA /* Dot.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				696C1B2099DAD9DCE9CA1D0E /* Vertex.m in Sources */,
 				696C175888438CF37B97A34C /* Stroke.m in Sources */,
 				696C15033BD2A13FBE91EC4C /* Scribble.m in Sources */,
+				696C119FFAB0B7F06286C69B /* Dot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

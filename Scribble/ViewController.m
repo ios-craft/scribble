@@ -11,6 +11,7 @@
 #import "ScribbleView.h"
 #import "Vertex.h"
 #import "Stroke.h"
+#import "Dot.h"
 
 
 @interface ViewController () {
@@ -61,7 +62,15 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     startPoint = CGPointZero;
-}
 
+    CGPoint lastPoint = [[touches anyObject] previousLocationInView:canvas];
+    CGPoint thisPoint = [[touches anyObject] locationInView:canvas];
+
+    if (CGPointEqualToPoint(lastPoint, thisPoint)) {
+        Dot *singleDot = [[Dot alloc] initWithLocation:thisPoint];
+        [scribble addNewMark:singleDot];
+        [canvas setNeedsDisplay];
+    }
+}
 
 @end

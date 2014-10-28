@@ -5,7 +5,7 @@
 
 #import "Stroke.h"
 
-static const CGFloat lineWidth = 4.0f;
+static const CGFloat lineWidth = 8.0f;
 
 @implementation Stroke {
 @private

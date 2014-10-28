@@ -7,9 +7,12 @@
 #import "Mark.h"
 
 
+
 @implementation ScribbleMemento {
     id <Mark> mark;
 }
+
+@synthesize mark = mark;
 
 - (instancetype)initWithMark:(id <Mark>)aMark {
     self = [super init];

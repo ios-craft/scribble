@@ -36,6 +36,11 @@
                                             <action selector="saveTapped:" destination="vXZ-lx-hvc" id="rrn-U6-gVO"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Load" id="ay0-AV-o4X">
+                                        <connections>
+                                            <action selector="loadTapped:" destination="vXZ-lx-hvc" id="Dvn-5V-oIP"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

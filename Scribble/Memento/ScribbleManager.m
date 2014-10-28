@@ -29,19 +29,29 @@
 }
 
 - (Scribble *)restoreScribble {
-    return nil;
+
+    NSString *scribbleDataName = @"scribble";
+
+
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSData *scribbleData = [fileManager contentsAtPath:[[self scribbleDataPath]
+            stringByAppendingPathComponent:scribbleDataName]];
+    
+    ScribbleMemento *scribbleMemento = [ScribbleMemento mementoWithData:scribbleData];
+    Scribble *loadedScribble = [Scribble scribbleWithMemento:scribbleMemento];
+
+
+    return loadedScribble;
 }
 
 
 #pragma mark -
 #pragma mark Private Methods
 
-- (NSString *) scribbleDataPath
-{
+- (NSString *)scribbleDataPath {
     // lazy create the scribble data directory
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:kScribbleDataPath])
-    {
+    if (![fileManager fileExistsAtPath:kScribbleDataPath]) {
         NSFileManager *fileManager = [NSFileManager defaultManager];
         [fileManager createDirectoryAtPath:kScribbleDataPath
                withIntermediateDirectories:YES

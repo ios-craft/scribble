@@ -9,6 +9,8 @@
 
 
 @interface ScribbleMemento : NSObject
+@property(nonatomic, strong) id <Mark> mark;
+
 - (instancetype)initWithMark:(id <Mark>)aMark;
 
 - (NSData *)data;

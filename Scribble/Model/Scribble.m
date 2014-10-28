@@ -32,6 +32,21 @@
     workingMark = nil;
 }
 
+- (id)initWithMemento:(ScribbleMemento *)memento {
+    self = [super init];
+    if (self) {
+        //[self startFromScratch];
+        [self startFromScratch];
+        [rootMark addMark:memento.mark];
+    }
+
+    return self;
+}
+
++ (instancetype)scribbleWithMemento:(ScribbleMemento *)memento {
+    return [[Scribble alloc] initWithMemento:memento];
+}
+
 - (void)addNewMark:(id <Mark>)aMark {
     [rootMark addMark:aMark];
     workingMark = aMark;

@@ -14,6 +14,10 @@
 
 - (id <Mark>)rootMark;
 
+- (id)initWithMemento:(ScribbleMemento *)memento;
+
++ (Scribble *)scribbleWithMemento:(ScribbleMemento *)memento;
+
 - (void)startFromScratch;
 
 - (void)addNewMark:(id <Mark>)aMark;

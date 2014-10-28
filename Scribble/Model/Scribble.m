@@ -6,6 +6,7 @@
 #import "Scribble.h"
 #import "Mark.h"
 #import "Stroke.h"
+#import "ScribbleMemento.h"
 
 
 @implementation Scribble {
@@ -40,5 +41,10 @@
     [workingMark addMark:mark];
 }
 
+
+- (ScribbleMemento *)scribbleMemento {
+    ScribbleMemento *memento = [[ScribbleMemento alloc] initWithMark:self.rootMark];
+    return memento;
+}
 
 @end

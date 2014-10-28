@@ -12,6 +12,8 @@
 #import "Vertex.h"
 #import "Stroke.h"
 #import "Dot.h"
+#import "ScribbleMemento.h"
+#import "ScribbleManager.h"
 
 
 @interface ViewController () {
@@ -80,6 +82,24 @@
 - (IBAction)newTapped:(id)sender {
     [self setEmptyScribble];
     [canvas setNeedsDisplay];
+}
+
+- (IBAction)saveTapped:(id)sender {
+//    ScribbleMemento *memento = [[ScribbleMemento alloc] initWithMark:scribble.rootMark];
+//    NSLog(@"Data! %@ %d", memento, memento.data.length);
+
+    ScribbleManager *manager = [ScribbleManager new];
+    [manager saveScribble:scribble];
+
+
+    // finally show an alertbox that says
+    // after the scribble is saved
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Your scribble is saved"
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];
 }
 
 

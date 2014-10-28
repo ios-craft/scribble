@@ -19,6 +19,7 @@
 		696C15033BD2A13FBE91EC4C /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1D04DD8DFCB25B3F290A /* Scribble.m */; };
 		696C15BF7CDD15D50DF8EEA5 /* ScribbleMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1703DDA4C1E16DC656BD /* ScribbleMemento.m */; };
 		696C175888438CF37B97A34C /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C15FBF9DC6ADE7AE447E6 /* Stroke.m */; };
+		696C19BE44A30CAF06BFB9A5 /* ScribbleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1EB2086C6C0F88184AF3 /* ScribbleManager.m */; };
 		696C1B2099DAD9DCE9CA1D0E /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C199ABEB0BF11D2E079D1 /* Vertex.m */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		40DD085C19FD3DFF000CD01C /* ScribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleView.m; sourceTree = "<group>"; };
 		696C10263282139DD7B4F991 /* ScribbleMemento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento.h; sourceTree = "<group>"; };
 		696C141BD9269F5CA2575E89 /* Scribble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
+		696C146365A747A80DBD7678 /* ScribbleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleManager.h; sourceTree = "<group>"; };
 		696C15FBF9DC6ADE7AE447E6 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
 		696C1703DDA4C1E16DC656BD /* ScribbleMemento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleMemento.m; sourceTree = "<group>"; };
 		696C1810CB2610ADF2960192 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		696C1D04DD8DFCB25B3F290A /* Scribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
 		696C1D171E8B28A6A3527BAA /* Dot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dot.h; sourceTree = "<group>"; };
 		696C1D26AFC83243574FC7FB /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mark.h; sourceTree = "<group>"; };
+		696C1EB2086C6C0F88184AF3 /* ScribbleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 			children = (
 				696C1703DDA4C1E16DC656BD /* ScribbleMemento.m */,
 				696C10263282139DD7B4F991 /* ScribbleMemento.h */,
+				696C1EB2086C6C0F88184AF3 /* ScribbleManager.m */,
+				696C146365A747A80DBD7678 /* ScribbleManager.h */,
 			);
 			path = Memento;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 				696C15033BD2A13FBE91EC4C /* Scribble.m in Sources */,
 				696C119FFAB0B7F06286C69B /* Dot.m in Sources */,
 				696C15BF7CDD15D50DF8EEA5 /* ScribbleMemento.m in Sources */,
+				696C19BE44A30CAF06BFB9A5 /* ScribbleManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

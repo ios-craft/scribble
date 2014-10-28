@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol Mark;
+@class ScribbleMemento;
 
 
 @interface Scribble : NSObject
@@ -18,4 +19,6 @@
 - (void)addNewMark:(id <Mark>)aMark;
 
 - (void)appendToCurrentMark:(id <Mark>)mark;
+
+- (ScribbleMemento *)scribbleMemento;
 @end

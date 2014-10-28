@@ -14,11 +14,14 @@
 #import "Dot.h"
 #import "ScribbleMemento.h"
 #import "ScribbleManager.h"
+#import "PlaceDotCommand.h"
+#import "CanvasNotificationsMediator.h"
 
 
 @interface ViewController () {
     Scribble *scribble;
     IBOutlet ScribbleView *canvas;
+    CanvasNotificationsMediator *mediator;
 }
 
 @end
@@ -33,6 +36,8 @@
     self.navigationItem.title = @"Scribble";
 
     [self setEmptyScribble];
+    mediator = [[CanvasNotificationsMediator alloc] initWithView:canvas];
+
 }
 
 - (void)setEmptyScribble {
@@ -73,10 +78,20 @@
     CGPoint thisPoint = [[touches anyObject] locationInView:canvas];
 
     if (CGPointEqualToPoint(lastPoint, thisPoint)) {
-        Dot *singleDot = [[Dot alloc] initWithLocation:thisPoint];
-        [scribble addNewMark:singleDot];
-        [canvas setNeedsDisplay];
+        [self drawDotAt:thisPoint];
     }
+}
+
+- (void)drawDotAt:(CGPoint)thisPoint {
+    PlaceDotCommand *cmd = [PlaceDotCommand new];
+    cmd.receiver = scribble;
+    cmd.location = thisPoint;
+
+    [cmd execute];
+
+//    Dot *singleDot = [[Dot alloc] initWithLocation:thisPoint];
+//    [scribble addNewMark:singleDot];
+//    [canvas setNeedsDisplay];
 }
 
 - (IBAction)newTapped:(id)sender {

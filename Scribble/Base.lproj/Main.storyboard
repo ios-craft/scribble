@@ -17,17 +17,35 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btb-cu-nZd" customClass="ScribbleView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-LT-68V">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hGg-7H-EX8"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="New" id="4l5-j3-ZSV"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DrS-LT-68V" secondAttribute="trailing" id="2Sc-Vi-ipT"/>
+                            <constraint firstItem="DrS-LT-68V" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4QL-Tz-5ab"/>
                             <constraint firstItem="Btb-cu-nZd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="92i-1I-gYO"/>
                             <constraint firstItem="Btb-cu-nZd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="K0J-Kj-hl1"/>
+                            <constraint firstItem="DrS-LT-68V" firstAttribute="top" secondItem="Btb-cu-nZd" secondAttribute="bottom" id="ZNG-8L-7fV"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DrS-LT-68V" secondAttribute="bottom" id="kbH-KX-a3G"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Btb-cu-nZd" secondAttribute="bottom" id="nSG-XC-Clu"/>
                             <constraint firstAttribute="trailing" secondItem="Btb-cu-nZd" secondAttribute="trailing" id="zTl-yd-0fV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nSG-XC-Clu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Bazgroł" id="u7U-kc-doG"/>
                 </viewController>

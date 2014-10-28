@@ -13,6 +13,8 @@
 
 - (id <Mark>)rootMark;
 
+- (void)startFromScratch;
+
 - (void)addNewMark:(id <Mark>)aMark;
 
 - (void)appendToCurrentMark:(id <Mark>)mark;

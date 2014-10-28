@@ -30,6 +30,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.title = @"Scribble";
 
+    [self setEmptyScribble];
+}
+
+- (void)setEmptyScribble {
     scribble = [Scribble new];
     canvas.mark = scribble.rootMark;
 }
@@ -72,5 +76,11 @@
         [canvas setNeedsDisplay];
     }
 }
+
+- (IBAction)newTapped:(id)sender {
+    [self setEmptyScribble];
+    [canvas setNeedsDisplay];
+}
+
 
 @end

@@ -26,7 +26,11 @@
                                     <constraint firstAttribute="height" constant="44" id="hGg-7H-EX8"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="New" id="4l5-j3-ZSV"/>
+                                    <barButtonItem title="New" id="4l5-j3-ZSV">
+                                        <connections>
+                                            <action selector="newTapped:" destination="vXZ-lx-hvc" id="1yz-eb-uZ8"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

@@ -20,10 +20,15 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        rootMark = [Stroke new];
+        [self startFromScratch];
     }
 
     return self;
+}
+
+- (void)startFromScratch {
+    rootMark = [Stroke new];
+    workingMark = nil;
 }
 
 - (void)addNewMark:(id <Mark>)aMark {

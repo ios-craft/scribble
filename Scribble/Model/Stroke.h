@@ -18,4 +18,5 @@
 - (id <Mark>) childMarkAtIndex:(NSUInteger) index;
 
 
+- (NSArray *)allVertices;
 @end

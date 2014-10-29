@@ -5,7 +5,15 @@
 
 #import <Foundation/Foundation.h>
 #import "Command.h"
+#import <UIKit/UIKit.h>
+
+@class Scribble;
 
 
 @interface PlaceStrokeCommand : NSObject <Command>
+
+@property (nonatomic, assign) CGPoint location;
+@property (nonatomic, strong) Scribble *receiver;
+@property (nonatomic, strong) NSArray *vertices;
+
 @end

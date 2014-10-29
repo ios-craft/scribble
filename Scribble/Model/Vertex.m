@@ -62,5 +62,12 @@
     CGContextAddLineToPoint(context, x, y);
 }
 
+- (NSString *)description {
+    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
+    [description appendFormat:@"%.0f,%.0f", self.location.x, self.location.y];
+    [description appendString:@">"];
+    return description;
+}
+
 
 @end

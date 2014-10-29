@@ -62,4 +62,8 @@
     return memento;
 }
 
+- (NSArray *)verticesOfCurrentStroke {
+    Stroke *stroke = workingMark;
+    return [stroke allVertices];
+}
 @end

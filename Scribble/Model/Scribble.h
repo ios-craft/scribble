@@ -25,4 +25,6 @@
 - (void)appendToCurrentMark:(id <Mark>)mark;
 
 - (ScribbleMemento *)scribbleMemento;
+
+- (NSArray *)verticesOfCurrentStroke;
 @end

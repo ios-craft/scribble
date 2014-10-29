@@ -80,4 +80,7 @@ static const CGFloat lineWidth = 8.0f;
 }
 
 
+- (NSArray *)allVertices {
+    return [children copy];
+}
 @end

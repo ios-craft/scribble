@@ -16,6 +16,7 @@
 #import "ScribbleManager.h"
 #import "PlaceDotCommand.h"
 #import "CanvasNotificationsMediator.h"
+#import "PlaceStrokeCommand.h"
 
 
 @interface ViewController () {
@@ -72,14 +73,27 @@
 
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    startPoint = CGPointZero;
 
     CGPoint lastPoint = [[touches anyObject] previousLocationInView:canvas];
     CGPoint thisPoint = [[touches anyObject] locationInView:canvas];
 
     if (CGPointEqualToPoint(lastPoint, thisPoint)) {
         [self drawDotAt:thisPoint];
+    } else {
+        [self drawStroke];
     }
+
+    startPoint = CGPointZero;
+
+}
+
+- (void)drawStroke {
+    PlaceStrokeCommand *cmd = [PlaceStrokeCommand new];
+    cmd.receiver = scribble;
+    cmd.location = startPoint;
+    cmd.vertices = [scribble verticesOfCurrentStroke];
+    NSLog(@"Vertices %@", cmd.vertices);
+    [cmd execute];
 }
 
 - (void)drawDotAt:(CGPoint)thisPoint {

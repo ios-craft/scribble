@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="M4f-ll-9B0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="M4f-ll-9B0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Bazgroł-->
@@ -61,7 +63,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Bazgroł" id="u7U-kc-doG"/>
+                    <navigationItem key="navigationItem" title="Bazgroł" id="u7U-kc-doG">
+                        <barButtonItem key="rightBarButtonItem" title="Options" style="plain" id="JhD-GM-C0C">
+                            <connections>
+                                <segue destination="lLk-Iy-E7n" kind="show" identifier="PenOptions" id="cob-rS-gmi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="canvas" destination="Btb-cu-nZd" id="tyO-rD-PFb"/>
                     </connections>
@@ -69,6 +77,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1150" y="211"/>
+        </scene>
+        <!--Pen OptionsVC-->
+        <scene sceneID="Lxx-AS-Otm">
+            <objects>
+                <viewController id="lLk-Iy-E7n" customClass="PenOptionsVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U03-5o-GtF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uhu-UF-pJc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xZE-4Z-QQC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pen size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9r-uG-WDQ">
+                                <rect key="frame" x="268" y="98" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="mLV-cd-5lc">
+                                <rect key="frame" x="14" y="151" width="572" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="lLk-Iy-E7n" eventType="valueChanged" id="ZEQ-H4-wg0"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNE-Xx-JXh">
+                                <rect key="frame" x="271" y="204" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dNE-Xx-JXh" firstAttribute="top" secondItem="mLV-cd-5lc" secondAttribute="bottom" constant="23" id="0WI-NA-cbu"/>
+                            <constraint firstItem="o9r-uG-WDQ" firstAttribute="top" secondItem="U03-5o-GtF" secondAttribute="bottom" constant="34" id="2Ma-Ae-TcP"/>
+                            <constraint firstItem="dNE-Xx-JXh" firstAttribute="centerX" secondItem="mLV-cd-5lc" secondAttribute="centerX" id="9bT-SH-Omk"/>
+                            <constraint firstItem="mLV-cd-5lc" firstAttribute="top" secondItem="o9r-uG-WDQ" secondAttribute="bottom" constant="32" id="E3D-4d-XGe"/>
+                            <constraint firstAttribute="centerX" secondItem="o9r-uG-WDQ" secondAttribute="centerX" constant="-11.5" id="KQY-1F-l3M"/>
+                            <constraint firstItem="mLV-cd-5lc" firstAttribute="leading" secondItem="xZE-4Z-QQC" secondAttribute="leadingMargin" id="SLO-Yf-z7P"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mLV-cd-5lc" secondAttribute="trailing" id="dm4-fN-7Eu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="penSizeLabel" destination="dNE-Xx-JXh" id="EbZ-BS-40W"/>
+                        <outlet property="penSizeSlider" destination="mLV-cd-5lc" id="9Na-9I-uhz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vtO-df-OKF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011" y="205"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TFC-S4-erJ">

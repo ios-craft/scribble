@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4085337C1A01000F002D54B5 /* PenOptionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4085337B1A01000F002D54B5 /* PenOptionsVC.m */; };
 		40DD083719FD3A13000CD01C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD083619FD3A13000CD01C /* main.m */; };
 		40DD083A19FD3A13000CD01C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD083919FD3A13000CD01C /* AppDelegate.m */; };
 		40DD083D19FD3A13000CD01C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD083C19FD3A13000CD01C /* ViewController.m */; };
@@ -17,6 +18,8 @@
 		40DD085D19FD3DFF000CD01C /* ScribbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DD085C19FD3DFF000CD01C /* ScribbleView.m */; };
 		696C116E0DBB230F3052BAB4 /* PlaceDotCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C170607895678A10E7830 /* PlaceDotCommand.m */; };
 		696C119FFAB0B7F06286C69B /* Dot.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1AB9A71FF112980284F5 /* Dot.m */; };
+		696C12CD9B2443D2F0B9538E /* MediatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C10992BD0240D1ED9C96D /* MediatorFactory.m */; };
+		696C1409B4605570144DF167 /* SceneMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1DBD73C71A2DA06F4D15 /* SceneMediator.m */; };
 		696C15033BD2A13FBE91EC4C /* Scribble.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1D04DD8DFCB25B3F290A /* Scribble.m */; };
 		696C15BF7CDD15D50DF8EEA5 /* ScribbleMemento.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C1703DDA4C1E16DC656BD /* ScribbleMemento.m */; };
 		696C1671BCAA03F38C6CCE14 /* NotificationPublisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 696C14B580B0D222CD9FEECE /* NotificationPublisher.m */; };
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4085337A1A01000F002D54B5 /* PenOptionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenOptionsVC.h; sourceTree = "<group>"; };
+		4085337B1A01000F002D54B5 /* PenOptionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenOptionsVC.m; sourceTree = "<group>"; };
 		40DD083119FD3A13000CD01C /* Scribble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scribble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40DD083519FD3A13000CD01C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40DD083619FD3A13000CD01C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 		40DD085C19FD3DFF000CD01C /* ScribbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleView.m; sourceTree = "<group>"; };
 		696C10263282139DD7B4F991 /* ScribbleMemento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScribbleMemento.h; sourceTree = "<group>"; };
 		696C102D3944DDDD4BE66216 /* PlaceStrokeCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceStrokeCommand.m; sourceTree = "<group>"; };
+		696C10992BD0240D1ED9C96D /* MediatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediatorFactory.m; sourceTree = "<group>"; };
 		696C11A0DC868FF7FD313629 /* PlaceStrokeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceStrokeCommand.h; sourceTree = "<group>"; };
 		696C13F1876CCB7CA8D6B137 /* CanvasNotificationsMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasNotificationsMediator.m; sourceTree = "<group>"; };
 		696C141BD9269F5CA2575E89 /* Scribble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scribble.h; sourceTree = "<group>"; };
@@ -67,12 +73,15 @@
 		696C170607895678A10E7830 /* PlaceDotCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceDotCommand.m; sourceTree = "<group>"; };
 		696C1810CB2610ADF2960192 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
 		696C199ABEB0BF11D2E079D1 /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
+		696C1A08F0652DC2581E68E9 /* MediatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediatorFactory.h; sourceTree = "<group>"; };
 		696C1AB9A71FF112980284F5 /* Dot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dot.m; sourceTree = "<group>"; };
+		696C1BB8AAB8299D6B92A807 /* SceneMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneMediator.h; sourceTree = "<group>"; };
 		696C1BF1A797C4606634DF05 /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
 		696C1D04DD8DFCB25B3F290A /* Scribble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scribble.m; sourceTree = "<group>"; };
 		696C1D05FFD6A4D3211A2107 /* NotificationPublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationPublisher.h; sourceTree = "<group>"; };
 		696C1D171E8B28A6A3527BAA /* Dot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dot.h; sourceTree = "<group>"; };
 		696C1D26AFC83243574FC7FB /* Mark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mark.h; sourceTree = "<group>"; };
+		696C1DBD73C71A2DA06F4D15 /* SceneMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneMediator.m; sourceTree = "<group>"; };
 		696C1EB2086C6C0F88184AF3 /* ScribbleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScribbleManager.m; sourceTree = "<group>"; };
 		696C1EBC3ACB53F7CB002BA6 /* CanvasNotificationsMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasNotificationsMediator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +138,9 @@
 				696C1921CD13FE4ABA87E5E5 /* Memento */,
 				696C1574056DEEEB05F373D3 /* Commands */,
 				696C19F92E73A5EC1BFF04C9 /* Events */,
+				4085337A1A01000F002D54B5 /* PenOptionsVC.h */,
+				4085337B1A01000F002D54B5 /* PenOptionsVC.m */,
+				696C1C37AB5F653A4FABA4B0 /* Creation */,
 			);
 			path = Scribble;
 			sourceTree = "<group>";
@@ -214,8 +226,19 @@
 				696C1D05FFD6A4D3211A2107 /* NotificationPublisher.h */,
 				696C13F1876CCB7CA8D6B137 /* CanvasNotificationsMediator.m */,
 				696C1EBC3ACB53F7CB002BA6 /* CanvasNotificationsMediator.h */,
+				696C1DBD73C71A2DA06F4D15 /* SceneMediator.m */,
+				696C1BB8AAB8299D6B92A807 /* SceneMediator.h */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		696C1C37AB5F653A4FABA4B0 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				696C10992BD0240D1ED9C96D /* MediatorFactory.m */,
+				696C1A08F0652DC2581E68E9 /* MediatorFactory.h */,
+			);
+			path = Creation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +344,7 @@
 				40DD083D19FD3A13000CD01C /* ViewController.m in Sources */,
 				40DD083A19FD3A13000CD01C /* AppDelegate.m in Sources */,
 				40DD085D19FD3DFF000CD01C /* ScribbleView.m in Sources */,
+				4085337C1A01000F002D54B5 /* PenOptionsVC.m in Sources */,
 				40DD083719FD3A13000CD01C /* main.m in Sources */,
 				696C1B2099DAD9DCE9CA1D0E /* Vertex.m in Sources */,
 				696C175888438CF37B97A34C /* Stroke.m in Sources */,
@@ -332,6 +356,8 @@
 				696C1D2DBB107C44BA90C150 /* PlaceStrokeCommand.m in Sources */,
 				696C1671BCAA03F38C6CCE14 /* NotificationPublisher.m in Sources */,
 				696C16B7D1D851EC6928CB83 /* CanvasNotificationsMediator.m in Sources */,
+				696C1409B4605570144DF167 /* SceneMediator.m in Sources */,
+				696C12CD9B2443D2F0B9538E /* MediatorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +548,7 @@
 				40DD085619FD3A13000CD01C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40DD085719FD3A13000CD01C /* Build configuration list for PBXNativeTarget "ScribbleTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +557,7 @@
 				40DD085919FD3A13000CD01C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

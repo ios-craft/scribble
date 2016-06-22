@@ -11,12 +11,14 @@
 #import "ScribbleView.h"
 #import "Vertex.h"
 #import "Stroke.h"
+#import "SceneMediator.h"
 #import "Dot.h"
 #import "ScribbleMemento.h"
 #import "ScribbleManager.h"
 #import "PlaceDotCommand.h"
 #import "CanvasNotificationsMediator.h"
 #import "PlaceStrokeCommand.h"
+#import "MediatorFactory.h"
 
 
 @interface ViewController () {
@@ -38,6 +40,8 @@
 
     [self setEmptyScribble];
     mediator = [[CanvasNotificationsMediator alloc] initWithView:canvas];
+
+    self.sceneMediator = [[MediatorFactory sharedMediatorFactory] injectSceneMediator];
 
 }
 
@@ -132,5 +136,13 @@
     [canvas setNeedsDisplay];
 }
 
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    [self.sceneMediator willDisplayPenOptions:segue currentSize:8.0];
+}
 
 @end
